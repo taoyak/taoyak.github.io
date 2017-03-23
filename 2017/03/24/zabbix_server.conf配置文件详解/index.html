@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Flat life, is a happy."><title>python字符串常用内置参数详解 | Yak's blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">python字符串常用内置参数详解</h1><a id="logo" href="/.">Yak's blog</a><p class="description">taoyak</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">python字符串常用内置参数详解</h1><div class="post-meta">Mar 24, 2017<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>zabbix_server.conf配置文件详解<br>AlertScriptsPath /usr/local/share/zabbix/alertscripts(默认路径) #定制警报脚本的位置（取决于编译时初始化变量的datadir）。</p>
+<p>AllowRoot 默认值：0 说明，是否允许使用root启动; 0:不允许，1:允许，默认情况下她使用zabbix用户<br>来启动zabbix server进程，不推荐使用root</p>
+<p>CacheSize 取值范围：128K-8G 默认值：8M<br>配置高速缓存，以字节为单位的大小。用于存储host,item，trigger数据，2.2.3版本之前最大支持2G，目前最大支持8G，一般用不了多少的。</p>
+<p>CacheUpdateFrequency 取值范围：1-3600 默认60; 说明：多少秒更新一次配置缓存</p>
+<p>DBHost 默认值：localhost 说明：数据库主机地址</p>
+<p>DBName 默认值：无 强制填写：是</p>
+<p>DBPassword: 默认值：空，说明：数据库密码</p>
+<p>DBPort: 取值范围：1024-65535<br>默认值：3306<br>说明：SQLlite作为DB，这个选项请忽略，如果使用socket,也请忽略。</p>
+<p>DBSchema<br>说明：Schema名称,用于IBM DB2、PostgreSQL.</p>
+<p>DBSocket 默认值：/tmp/mysql.sock<br>说明：mysql sock文件路径</p>
+<p>DebugLevel<br>取值范围：0-5<br>默认值：3<br>说明：指定debug级别<br>0 -基本信息<br>1 -critical信息<br>2 -error信息<br>3 -warnings信息<br>4 -调试日志，日志内容很多，慎重使用<br>5 -用于调试web和vmware监控</p>
+<p>ExternalScripts<br>默认值：/usr/local/share/zabbix/externalscripts<br>说明：外部脚本目录</p>
+<p>Fping6Location<br>默认值：/usr/sbin/fping6<br>说明：fping6路径，不懂fping的人可以百度一下，如果zabbix非root启动，请给fping6 SUID</p>
+<p>FpingLocation<br>默认值：/usr/sbin/fping<br>说明：和上面的一样</p>
+<p>HistoryCacheSize<br>取值范围：128k-2G<br>默认值：8M<br>说明：历史记录缓存大小，用于存储历史记录</p>
+<p>HistoryTextCacheSize<br>取值范围：128K-2G<br>默认值：16M<br>说明:文本类型历史记录的缓存大小，存储character,text、log历史记录</p>
+<p>HousekeepingFrequency<br>取值范围：0-24<br>默认值：1<br>说明：housekeep执行频率，默认每小时回去删除一些过期数据。如果server重启，那么30<br>分钟之后才执行一次，接下来，每隔一小时在执行一次。</p>
+<p>Include<br>说明：include配置文件，可以使用正则表达式，例如：/usr/local/zabbix-2.4.4/conf/micous.com/*.conf/micous</p>
+<p>JavaGateway<br>说明：Zabbix Java gateway的主机名，需要启动Java pollers</p>
+<p>JavaGatewayPort<br>取值范围：1024-32767<br>默认值：10052<br>Zabbix Java gateway监听的端口</p>
+<p>ListenIP<br>默认值：0.0.0.0<br>说明：监听地址，留空则会在所有的地址上监听，可以监听多个IP地址，IP之间使用逗号分隔，<br>例如：127.0.0.1,10.10.0.2</p>
+<p>ListenPort<br>取值范围：1024-32767<br>默认值：10051<br>说明：监听端口</p>
+<p>LoadModule<br>说明:加载模块，格式：LoadModule=，文件必须在指定LoadModulePath目录下，如果需要加载多个<br>模块，那么写多个即可。</p>
+<p>LoadModulePath<br>模块目录，参考上边</p>
+<p>LogFileSize<br>取值范围：0-1024<br>默认值：1<br>0表示禁用日志自动rotation,如果日志达到了限制，并且rotation失败，老日志文件将会被清空掉，<br>重新生成一个新日志。</p>
+<p>LogSlowQueries<br>取值范围：0-3600000<br>默认值：0<br>多慢的数据库查询将会被记录，单位：毫秒，0表示不记录慢查询。只有在DebugLevel=3时，这个配置<br>才有效。</p>
+<p>MaxHousekeeperDelete<br>取值范围：0-1000000<br>默认值：5000<br>housekeeping一次删除的数据不能大于MaxHousekeeperDelete</p>
+<p>PidFile<br>默认值：/tmp/zabbix_server.pid<br>PID文件</p>
+<p>ProxyConfigFrequency<br>取值范围：1-604800<br>默认范围：3600<br>proxy被动模式下，server多少秒同步配置文件到proxy。</p>
+<p>ProxyDataFrequency<br>取值范围：1-3600<br>默认值：1<br>被动模式下，zabbix server间隔多少秒向proxy请求历史数据</p>
+<p>SenderFrequency<br>取值范围：5-3600<br>默认值；30<br>间隔多少秒，再尝试发送未发送的警报。</p>
+<p>SNMPTrapperFile<br>默认值：/tmp/zabbix_traps.tmp<br>SNMP trap发送到server的数据临时存放文件。</p>
+<p>SourceIP<br>出口IP地址</p>
+<p>SSHKeyLocation<br>SSH公钥私钥路径</p>
+<p>SSLCertLocation<br>SSL证书目录，用于web监控</p>
+<p>SSLKeyLocation<br>SSL认证私钥路径、用于web监控</p>
+<p>SSLCALocation<br>SSL认证,CA路径，如果为空，将会使用系统默认的CA</p>
+<p>StartDBSyncers<br>取值范围：1-100<br>默认值：4<br>预先foke DB Syncers的数量，1.8.5以前最大值为64</p>
+<p>StartDiscoverers<br>取值范围：0-250<br>默认值：1<br>pre-forked discoverers的数量，1.8.5版本以前最大可为255</p>
+<p>StartHTTPPollers<br>取值范围：0-1000<br>默认值：1<br>pre-forked HTTP pollers的数量，1.8.5以前最大255</p>
+<p>StartIPMIPollers<br>取值范围：0-1000<br>默认值：0<br>pre-forked IPMI pollers的数量，1.8.5之前，最大为255</p>
+<p>Timeout<br>取值范围：1-30<br>默认值：3<br>agent，snmp，external check的超时时间，单位为秒</p>
+<p>TrapperTimeout<br>取值范围：1-300<br>默认值：300<br>处理trapper数据的超时时间</p>
+<p>TrendCacheSize<br>取值范围：128K-2G<br>默认值：4M<br>历史数据缓存大小</p>
+<p>UnavailableDelay<br>取值范围：1-3600<br>默认值：60<br>间隔多少秒再次检测主机是否可用</p>
+<p>UnreachableDelay<br>取值范围：1-3600<br>默认值：15<br>间隔多少秒再次检测主机是否可达。</p>
+<p>UnreachablePeriod<br>取值范围：1-3600<br>默认值：45<br>检测到主机不可用，多久将它置为不可达</p>
+<p>User<br>默认值：zabbix<br>启动zabbix server的用户，在配置禁止root启动，并且当前shell用户是root得情况下有效。如果当前用户是ttlsa，那么zabbix server的运行用户是ttlsa</p>
+<p>ValueCacheSize<br>取值范围：0,128K-64G<br>默认值：8M<br>0表示禁用，history value缓存大小，当缓存超标了，将会每隔5分钟往server日志里面记录。养成看日志的好习惯。</p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://taoyak.com/2017/03/24/zabbix_server.conf配置文件详解/" data-id="cj0mlmshg0002ddqeme9h549q" class="article-share-link">分享到</a><div class="tags"><a href="/tags/zabbix/">zabbix</a></div><div class="post-nav"><a href="/2017/03/23/python字符串常用内置参数详解/" class="next">python字符串常用内置参数详解</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://taoyak.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/zabbix/" style="font-size: 15px;">zabbix</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/zabbix_server.conf配置文件详解/">python字符串常用内置参数详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/23/python字符串常用内置参数详解/">python字符串常用内置参数详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/06/zabbix笔记之相关知识简单介绍/">zabbix监控软件相关知识简单介绍</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.djhull.com/" title="超哥" target="_blank">超哥</a><ul></ul><a href="https://lankors.github.io/" title="郑莹莹" target="_blank">郑莹莹</a><ul></ul><a href="http://mingmings.org/" title="宋明明" target="_blank">宋明明</a><ul></ul><a href="https://obeyconquer.github.io/" title="高洋" target="_blank">高洋</a><ul></ul><a href="https://dolinks.github.io/" title="张艺馨" target="_blank">张艺馨</a><ul></ul><a href="null" title="白乙兵" target="_blank">白乙兵</a><ul></ul><a href="https://www.heyyezi.com/" title="赵强" target="_blank">赵强</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Yak's blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
